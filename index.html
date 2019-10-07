@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ckplayer</title>
+		
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0px;
+				font-family: "Microsoft YaHei", YaHei, "微软雅黑", SimHei, "黑体";
+				font-size: 18px;
+			}
+			p{
+				padding-left: 2em;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<script type="text/javascript" src="ckplayer/ckplayer.js"></script>
+<div class="video" style="width: 1000px;height: 600px;"></div>
+<script type="text/javascript">
+	var videoObject = {
+		container: '.video',//“#”代表容器的ID，“.”或“”代表容器的class
+		variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+		autoplay:true,//自动播放
+		live:false,
+		video:'localhost:8081/v_map/mv.m3u8'//视频地址
+	};
+	var player=new ckplayer(videoObject);
+</script>
+		<p>欢迎使用ckplayer，当前版本：X1，<a href="http://www.ckplayer.com/" target="_blank">官网</a>，<a href="http://www.ckplayer.com/manualX/" target="_blank">帮助手册</a></p>
+		<p><a href="sample/index.html" target="_blank">全功能演示</a></p>
+		<p><a href="sample/iframe.html" target="_blank">使用框架播放演示</p>
+		<p><a href="sample/flashplayer.html" target="_blank">仅flashplayer播放演示</p>
+		<p><a href="sample/h5.html" target="_blank">仅H5播放演示</p>
+		<p><a href="sample/rtmp.html" target="_blank">RTMP播放示例</p>
+		<p><a href="sample/ios.html" target="_blank">在各平台统一播放器风格</p>
+		<p><a href="sample/dm.html" target="_blank">弹幕演示</p>
+		<p><a href="sample/adother.html" target="_blank">单独配置广告，支持角标广告和片头贴片，中插，结束广告，暂停广告</p>	
+		<p><a href="http://www.ckplayer.com/" target="_blank">更多演示</p>
+	</body>
+
+</html>
